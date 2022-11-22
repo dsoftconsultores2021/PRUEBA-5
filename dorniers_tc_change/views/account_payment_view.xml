@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_payment_form_inherit" model="ir.ui.view">
+            <field name="name">account.payment.form.inherit</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='is_internal_transfer']" position="before">
+                    <field name="is_payment_in_me" invisible="1"/>
+                    <field name="is_special_tc" attrs="{'readonly': [('state','!=','draft')],'invisible': [('is_payment_in_me','!=',True)]}"/>
+                    <field name="currency_tc" attrs="{'readonly': ['|',('is_special_tc','=',False),('state','!=','draft')],'invisible': [('is_payment_in_me','!=',True)]}" force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

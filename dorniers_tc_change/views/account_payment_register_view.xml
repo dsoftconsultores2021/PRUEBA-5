@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_payment_register_form_inherit" model="ir.ui.view">
+            <field name="name">account.payment.register.inherit</field>
+            <field name="model">account.payment.register</field>
+            <field name="inherit_id" ref="account.view_account_payment_register_form" />
+            <field name="arch" type="xml">
+                <!--<xpath expr="//group//group[@name='group1']//field[@name='communication']" position="after">-->
+                <field name="communication" position="after">
+                    <field name="is_special_tc" attrs="{'invisible': [('is_payment_in_me','!=',True)]}"/>
+                    <field name="currency_tc" attrs="{'readonly': [('is_special_tc','=',False)],'invisible': [('is_payment_in_me','!=',True)]}" force_save="1"/>
+                    <field name="is_payment_in_me" invisible="1"/>
+                </field>
+                <!--</xpath>-->
+            </field>
+        </record>
+    </data>
+</odoo>
