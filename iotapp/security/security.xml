@@ -1,0 +1,72 @@
+<odoo>
+
+    <record id="model_access_organizacion" model="ir.model.access">
+        <field name="name">model.access.organizacion</field>
+        <field name="model_id" ref="iotapp.model_iot_organizacion"/>
+        <field name="group_id" ref="base.group_system" />
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_access_grupo" model="ir.model.access">
+        <field name="name">model.access.grupo</field>
+        <field name="model_id" ref="iotapp.model_iot_grupo"/>
+        <field name="group_id" ref="base.group_system" />
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_access_dispositivo" model="ir.model.access">
+        <field name="name">model.access.dispositivo</field>
+        <field name="model_id" ref="iotapp.model_iot_dispositivo"/>
+        <field name="group_id" ref="base.group_system" />
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_access_dispositvo_modelo" model="ir.model.access">
+        <field name="name">model.access.dispositivo.modelo</field>
+        <field name="model_id" ref="iotapp.model_iot_dispositivo_modelo"/>
+        <field name="group_id" ref="base.group_system" />
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_access_dispositvo_dato" model="ir.model.access">
+        <field name="name">model.access.dispositivo.dato</field>
+        <field name="model_id" ref="iotapp.model_iot_dispositivo_dato"/>
+        <field name="group_id" ref="base.group_system" />
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="model_access_usuario" model="ir.model.access">
+        <field name="name">model.access.usuario</field>
+        <field name="model_id" ref="iotapp.model_iot_usuario"/>
+        <field name="group_id" ref="base.group_system" />
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_access_conductor" model="ir.model.access">
+        <field name="name">model.access.conductor</field>
+        <field name="model_id" ref="iotapp.model_iot_conductor"/>
+        <field name="group_id" ref="base.group_system" />
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+
+    <record id = "module_iotapp" model = "ir.module.category">
+        <field name = "name"    >IoT App</field>
+    </record>
+
+    <record id = "res_groups_administrador" model = "res.groups">
+        <field name = "name">Administrador</field>
+        <field name = "category_id" ref = "iotapp.module_iotapp"/>
+    </record>
+
+    <record id = "res_groups_user_free" model = "res.groups">
+        <field name = "name">Usuario Free</field>
+        <field name = "category_id" ref = "iotapp.module_iotapp"/>
+    </record>
+
+    <record id = "res_groups_user_premium" model = "res.groups">
+        <field name = "name">Usuario Premium</field>
+        <field name = "category_id" ref = "iotapp.module_iotapp"/>
+    </record>
+
+</odoo>
