@@ -260,7 +260,7 @@
 
     <!--Menus del PRINCIPAL-->
     <menuitem id="menu_principal" 
-                name="Servicio en la nube de internet de las cosas" 
+                name="CONECTSEN" 
                 parent="" 
                 action="action_view_organizacion"/>
     
